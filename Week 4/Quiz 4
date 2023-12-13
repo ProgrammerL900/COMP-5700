@@ -1,0 +1,50 @@
+Question 1
+Besides Linux OSs, UNIX OSs also use Executable and Linkable Format (ELF) for binary code.
+True
+
+Question 2
+Select the file types that are of ELF file format:
+Relocatable object files (.o)
+Executable object files
+Shared object files (.so)
+
+Question 3
+ELF header points to the program header table and section header table, while recording the size of each of them.
+True
+
+Question 4
+.bss section contains initialized data.
+False
+
+Question 5
+If an object file needs further linking with other object files, it contains no relocation information.
+False
+
+Question 6
+One segment in a binary code file can contain multiple sections.
+True
+
+Question 7
+Linking can happen during:
+load time
+compile time
+run time
+
+Question 8
+For the first time the program calls foo function, which is in another object file, which two instructions are executed to solve this?
+0x8049094 -> 0x8049060
+
+Question 9
+For the second time the program calls foo function, which is in another object file, which of the following(s) is/are true?
+The second time foo function resolution is different from first time
+The second time will not jump into the .plt address in the first time
+
+Question 10
+For the first time the program calls foo function, what is actual target address the instruction
+
+jmp *0x804c014
+jumps to is 
+0x8049060
+ . (Address in hexadecimal, starts with 0x, and a total of 7 hexadecimal digits)
+
+
