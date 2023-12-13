@@ -1,0 +1,55 @@
+Question 1
+Why C programming language is believed to weak in security features?
+  No boundary checks 
+  No overflow checks 
+  Static typing but with loopholes 
+  No automatic memory management 
+ 
+Question 2
+Why C programming language is still widely used today?
+  Backwards-compatibility for legacy systems 
+  Performance reasons 
+ 
+Question 3
+Consider the following simple program:
+
+#include <string.h>
+void main(int argc, char **argv)
+{
+  char buf[16];
+  strcpy(buf, argv[1]);
+  return;
+}
+Is it possible to overflow? Where?
+  Yes. On the stack 
+ 
+Question 4
+Which defense mechanism is particularly effective for code injection attacks?
+  DEP/NX 
+ 
+Question 5
+In GCC, which compilation flag is for canary mechanism?
+Correct!
+  -fstack-protector 
+ 
+Question 6
+What defense mechanism mainly target(s) at code injection attacks?
+  DEP/NX 
+ 
+Question 7
+What defense mechanism randomize(s) memory layout? 
+  ASLR 
+ 
+Question 8
+Fuzzing can be categorized into the following classes:
+  Grey-box fuzzing 
+  Black-box fuzzing 
+  White-box fuzzing 
+ 
+Question 9
+The right order of attacks in history:
+  Code injection attacks, then code reuse attacks 
+ 
+Question 10
+Which of the following about stack canary defense is correct?
+  In function prologue, canary will be loaded and in function epilogue, canary will be checked 
