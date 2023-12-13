@@ -1,0 +1,111 @@
+Question 1:
+A C program is compiled on 32 bit x86 machine. A variable is declared this way:
+
+unsigned v = 0xdeadbeef;
+This variable v is stored at 0x555555558010 in the runtime memory.
+
+Fill in each byte in hexadecimal for each address in the following. Starts with 0x and then two digits of hexadecimal for all the blanks below. 
+Address:       content in hex:
+0x555555558010 : 0xef
+0x555555558011 : 0xbe
+0x555555558012 : 0xad
+0x555555558013 : 0xde
+
+Question 2: 
+A C program is compiled on 64 bit x86 machine. A variable is declared this way:
+
+long unsigned v = 0xdeadbeef;
+This variable v is stored at 0x555555558010 in the runtime memory.
+
+Fill in each byte in hexadecimal for each address in the following. Starts with 0x and then two digits of hexadecimal for all the blanks below. 
+Address:       content in hex:
+0x555555558010 : 0xef
+0x555555558011 : 0xbe
+0x555555558012 : 0xad
+0x555555558013 : 0xde
+0x555555558014 : 0x00
+0x555555558015 : 0x00
+0x555555558016 : 0x00
+0x555555558017 : 0x00
+
+Question 3
+A C program is compiled on 64 bit x86 machine. A variable is declared this way:
+
+long unsigned v = 0xdeadbeefdeadbeef;
+This variable v is stored at 0x555555558010 in the runtime memory.
+
+Fill in each byte in hexadecimal for each address in the following. Starts with 0x and then two digits of hexadecimal for all the blanks below. 
+Address:       content in hex:
+0x555555558010 : 0xef
+0x555555558011 : 0xbe
+0x555555558012 : 0xad
+0x555555558013 : 0xde
+0x555555558014 : 0xef
+0x555555558015 : 0xbe
+0x555555558016 : 0xad
+0x555555558017 : 0xde
+
+Question 4
+On 32-bit x86 machines, the following assembly code snippet makes a write system call.
+
+        # write(1, message, 14)
+        mov     $4, %eax                # system call 4 is write
+        mov     $1, %ebx                # file handle 1 is stdout
+        mov     $message, %ecx          # address of string to output
+        mov     $14, %edx               # number of bytes
+        int     $0x80
+
+                   # invoke operating system to do the write
+
+On 64-bit x86 machines, the following assembly code snippet makes a write system call.
+
+        # write(1, message, 14)
+        mov     $1, %rax                # system call 1 is write
+        mov     $1, %rdi                # file handle 1 is stdout
+        mov     $message, %rsi          # address of string to output
+        mov     $14, %rdx               # number of bytes
+        
+syscall
+
+                         # invoke operating system to do the write
+
+Question 5
+In ATT syntax of x86 instruction assembly, fill in the following with to move a constant 0x11 to eax register.
+
+mov 
+$0x11
+
+,
+%eax
+
+Question 6
+The current esp register value is 0x7fffffffde20. After executing the following instruction:
+
+ push    %ebp
+The current esp register value is 
+0x7fffffffde1c
+ . (The content in the blank should starts with 0x, followed by 12 hexadecimal digits, for instance, 0x7fffffffde20).
+
+Next, the following instruction is executed:
+
+ pop    %eax
+The current esp register value is 
+0x7fffffffde20
+ . (The content in the blank should starts with 0x, followed by 12 hexadecimal digits, for instance, 0x7fffffffde20).
+
+
+Question 7
+On 64-bit x86 machines, the registers used to pass the parameters for system calls and library calls are the same.
+False
+
+Question 8
+On 32-bit x86 machines and 64-bit x86 machines, the registers used to pass parameters for system calls are different.
+True
+
+Question 9
+The linear sweep disassembling algorithm follows the control flow transfer instruction target and continues with the target instruction.
+False
+
+Question 10
+Recursive always successfully recover all instructions in the binary.
+False
